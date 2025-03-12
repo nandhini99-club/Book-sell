@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        .header-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .header-buttons a {
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            color: white;
+        }
+        .login-btn {
+            background-color: #007bff;
+        }
+        .login-btn:hover {
+            background-color: #0056b3;
+        }
+        .guest-btn {
+            background-color: #28a745;
+        }
+        .guest-btn:hover {
+            background-color: #218838;
+        }
+        .book-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .book {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: center;
+        }
+        .book img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .buy-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .buy-btn:hover {
+            background-color: #218838;
+        }
+        .application-form {
+            margin-top: 30px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
+        .application-form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-buttons">
+        <a href="log.html" class="login-btn">Login</a>
+        <a href="log.html" class="guest-btn">Continue as Guest</a>
+    </div>
+    
+    <h1>Online Book Store</h1>
+    
+    <div class="book-container">
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <h3>Book Title 1</h3>
+            <p>Author: John Doe</p>
+            <p>Price: $10</p>
+            <form action="submit.php" method="post">
+                <input type="hidden" name="book" value="Book Title 1">
+                <input type="hidden" name="price" value="10">
+                <button type="submit" class="buy-btn">Buy Now</button>
+            </form>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <h3>Book Title 2</h3>
+            <p>Author: Jane Doe</p>
+            <p>Price: $15</p>
+            <form action="submit.php" method="post">
+                <input type="hidden" name="book" value="Book Title 2">
+                <input type="hidden" name="price" value="15">
+                <button type="submit" class="buy-btn">Buy Now</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="application-form">
+        <h2>Application Form</h2>
+        <form action="sub.php" method="post">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
